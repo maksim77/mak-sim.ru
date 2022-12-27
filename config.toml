@@ -1,0 +1,34 @@
+baseURL = 'https://mak-sim.ru/'
+languageCode = 'ru-ru'
+title = 'Maxim'
+theme = 'lynx'
+enableEmoji = true
+disableKinds = ["taxonomy", "term"]
+enableRobotsTXT = true
+googleAnalytics = 'G-96V0NZ6LQM'
+
+
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+
+[author]
+name = "Maxim Syomochkin"
+image = "img/author.jpg"
+ links = [
+    { email = "mailto:maksim77ster@gmail.com" },
+    { github = "https://github.com/maksim77" },
+    { mastodon = "https://pkm.social/@msemochkin" },
+    { instagram = "https://instagram.com/msemochkin" },
+    { telegram = "https://t.me/msemochkin" }
+ ]
+
+[deployment]
+order = [".jpg$", ".gif$"]
+
+[[deployment.targets]]
+name = "yandex"
+URL = "s3://mak-sim.ru?endpoint=storage.yandexcloud.net"
